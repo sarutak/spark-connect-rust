@@ -1,0 +1,62 @@
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+[workspace]
+members = ["crates/*", "examples"]
+resolver = "2"
+
+[workspace.package]
+authors = ["Steve Russo <64294847+sjrusso8@users.noreply.github.com>"]
+keywords = ["spark", "spark_connect"]
+readme = "README.md"
+edition = "2021"
+homepage = "https://github.com/sjrusso8/spark-connect-rs"
+description = "Apache Spark Connect Client for Rust"
+license = "Apache-2.0"
+documentation = "https://docs.rs/spark-connect-rs"
+repository = "https://github.com/sjrusso8/spark-connect-rs"
+rust-version = "1.81"
+
+[workspace.dependencies]
+tonic = { version ="0.11", default-features = false }
+
+tokio = { version = "1.44", default-features = false, features = ["macros"] }
+tower = { version = "0.5" }
+
+futures-util = { version = "0.3" }
+thiserror = { version = "2.0" }
+
+http-body = { version = "0.4.6" }
+
+arrow = { version = "55", features = ["prettyprint"] }
+arrow-ipc = { version = "55" }
+
+serde_json = { version = "1" }
+
+prost = { version = "0.12" }
+prost-types = { version = "0.12" }
+
+rand = { version = "0.9" }
+uuid = { version = "1.16", features = ["v4"] }
+url = { version = "2.5" }
+regex = { version = "1" }
+
+chrono = { version = "0.4" }
+
+datafusion = { version = "47.0", default-features = false }
+polars = { version = "0.43", default-features = false }
+polars-arrow = { version = "0.43", default-features = false, features = ["arrow_rs"]  }
