@@ -17,13 +17,14 @@
 # under the License.
 #
 
-name: build
+name: Build and test
 
 on:
+  workflow_dispatch:
   push:
-    branches: [main, "v*"]
+    branches: [master, "v*"]
   pull_request:
-    branches: [main, "v*"]
+    branches: [master, "v*"]
 
 jobs:
   format:
