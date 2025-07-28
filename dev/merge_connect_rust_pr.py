@@ -43,9 +43,9 @@ except ImportError:
     JIRA_IMPORTED = False
 
 # Remote name which points to the Github site
-PR_REMOTE_NAME = os.environ.get("PR_REMOTE_NAME", "apache-github")
+PR_REMOTE_NAME = os.environ.get("PR_REMOTE_NAME", "sarutak-github")
 # Remote name which points to Apache git
-PUSH_REMOTE_NAME = os.environ.get("PUSH_REMOTE_NAME", "apache")
+PUSH_REMOTE_NAME = os.environ.get("PUSH_REMOTE_NAME", "sarutak")
 # ASF JIRA username
 JIRA_USERNAME = os.environ.get("JIRA_USERNAME", "")
 # ASF JIRA password
@@ -62,8 +62,8 @@ JIRA_ACCESS_TOKEN = os.environ.get("JIRA_ACCESS_TOKEN")
 GITHUB_OAUTH_KEY = os.environ.get("GITHUB_OAUTH_KEY")
 
 
-GITHUB_BASE = "https://github.com/apache/spark-connect-rust/pull"
-GITHUB_API_BASE = "https://api.github.com/repos/apache/spark-connect-rust"
+GITHUB_BASE = "https://github.com/sarutak/spark-connect-rust/pull"
+GITHUB_API_BASE = "https://api.github.com/repos/sarutak/spark-connect-rust"
 JIRA_BASE = "https://issues.apache.org/jira/browse"
 JIRA_API_BASE = "https://issues.apache.org/jira"
 # Prefix added to temporary branches
